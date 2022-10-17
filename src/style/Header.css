@@ -7,13 +7,21 @@
     align-items: center;
 }
 
+.route {
+    color: white;
+}
+
 a {
     text-decoration: none;
-    color: white;
 }
 
 .route-container {
     display: flex;
     justify-content: space-around;
     gap: 80px;
+}
+
+.logo {
+    height: 5rem;
+    filter: invert(100%);
 }

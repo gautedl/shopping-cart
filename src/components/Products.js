@@ -19,7 +19,11 @@ const Products = () => {
     );
   }, []);
 
-  return <div className="products-container">{products}</div>;
+  return (
+    <div className="products">
+      <div className="products-container">{products}</div>
+    </div>
+  );
 };
 
 export default Products;

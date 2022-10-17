@@ -1,8 +1,15 @@
 .products-container {
     height: 100%;
+    max-width: 70%;
+    display: flex;
+    margin: 50px 0px;
+    gap: 40px;
+    flex-wrap: wrap;
+    flex: 4 1
+}
+
+.products {
     background-color: rgba(211, 211, 211, 0.048);
     display: flex;
     justify-content: center;
-    margin: 50px 0px;
-    gap: 40px;
 }

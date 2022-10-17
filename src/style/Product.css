@@ -1,0 +1,106 @@
+.item {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-left: -10rem;
+}
+
+.item-img {
+    max-width: 30rem;
+}
+
+.horisontal-line {
+    border-top: 1px rgba(150, 150, 150, 0.493) solid;
+    width: 20rem;
+    margin: 1rem 0px ;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.item-title {
+    font-size: 30px;
+}
+
+.title-price {
+    font-size: 30px;
+    color: rgb(45, 145, 45);
+}
+
+.cart-container {
+    margin-top: 2rem;
+}
+
+.item-price-small {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(45, 145, 45);
+}
+
+.buttons {
+    display: flex;
+    margin-top: .5rem;
+}
+
+.quantity {
+    display: block;
+    float: left;
+    width: 36px;
+    min-height: 36px;
+    background-color: transparent;
+    border: 1px solid #e4e4e4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.quantity.minus {
+    border-right-width: 0;
+}
+
+.quantity.pluss {
+    border-left-width: 0;
+}
+
+.quantity.minus:hover, .quantity.pluss:hover {
+    background-color: #d8d2d22c;
+} 
+
+.basket-btn {
+    margin-left: 3rem;
+    display: inline-block;
+    font-family: inherit;
+    background-color: #13aff0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 14px 20px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.basket-btn:hover {
+    background-color: #1291c7;
+}
