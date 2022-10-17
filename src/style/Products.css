@@ -1,0 +1,8 @@
+.products-container {
+    height: 100%;
+    background-color: rgba(211, 211, 211, 0.048);
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+    gap: 40px;
+}
