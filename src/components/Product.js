@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import gallery from '../gallery/index';
 import '../style/Product.css';
+import { Cart } from '../Cart/Cart';
 
-const Product = ({ match }) => {
+const Product = () => {
   const [item, setItem] = useState({});
   const [quantity, setQuantity] = useState(0);
   const { id } = useParams();
@@ -29,6 +30,25 @@ const Product = ({ match }) => {
     setQuantity(quantity + 1);
   };
 
+  const inputChangeHandler = (e) => {
+    console.log(e);
+  };
+
+  const addToCart = () => {
+    const index = Cart.findIndex((i) => i.title === item.title);
+
+    if (quantity === 0) {
+      return;
+    }
+
+    if (index > -1) {
+      Cart[index].quantity += quantity;
+    } else {
+      item.quantity = quantity;
+      Cart.push(item);
+    }
+  };
+
   return (
     <div className="item">
       <img className="item-img" src={item.src} alt="item" />
@@ -49,7 +69,11 @@ const Product = ({ match }) => {
               -
             </button>
 
-            <input className="quantity val" value={quantity} />
+            <input
+              className="quantity val"
+              value={quantity}
+              onChange={inputChangeHandler}
+            />
 
             <button
               className="quantity pluss"
@@ -58,7 +82,7 @@ const Product = ({ match }) => {
             >
               +
             </button>
-            <button className="basket-btn" type="button">
+            <button className="basket-btn" type="button" onClick={addToCart}>
               Add to Basket
             </button>
           </div>

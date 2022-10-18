@@ -18,10 +18,53 @@ a {
 .route-container {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     gap: 80px;
 }
 
 .logo {
     height: 5rem;
     filter: invert(100%);
+}
+
+.header-icon {
+    filter: invert(100%);
+    width: 2.5rem;
+}
+
+.cart-quantity {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 600;
+    padding: 3px 5px;
+    margin-left: 8px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    background-color: #13aff0;
+}
+
+.cart-quantity::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -3px;
+    width: 0;
+    height: 0;
+    margin-top: 4px;
+    border-style: solid solid solid none;
+    border-width: 5px 5px 5px medium;
+    border-top-color: transparent !important;
+    border-bottom-color: transparent !important;
+    border-color: #13aff0;
+}
+
+.cart-div {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
 }

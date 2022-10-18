@@ -1,0 +1,14 @@
+.checkout {
+    width: 100%;
+    text-align: left;
+}
+
+.checkout-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    height: 5rem;
+    background-color: #ebebeb;
+    align-items: center;
+    border-bottom: rgba(197, 197, 197, 0.534) 1px solid;
+    padding: 0px 7rem;
+}

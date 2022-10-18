@@ -1,0 +1,22 @@
+.product-line {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    align-items: center;
+    margin: 0px 7rem;
+    margin-top: 1rem;
+}
+
+.checkout-img {
+    width: 100px;
+}
+
+.horisontal-line-2 {
+    border-top: 1px rgba(150, 150, 150, 0.493) solid;
+    width: 100%;
+    margin: 1rem 0px ;
+}

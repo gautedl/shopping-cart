@@ -67,6 +67,10 @@
     cursor: pointer;
 }
 
+.quantity.val:focus {
+    outline: none;
+}
+
 .quantity.minus {
     border-right-width: 0;
 }
@@ -104,3 +108,4 @@
 .basket-btn:hover {
     background-color: #1291c7;
 }
+
