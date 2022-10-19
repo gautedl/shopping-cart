@@ -1,5 +1,9 @@
-export const Cart = [];
+export let Cart = [];
 
-export const cartSize = Cart.reduce((acc, obj) => {
-  return acc + obj.quantity;
-}, 0);
+
+
+export const deleteFromCart = (item) => {
+  Cart = Cart.filter((x) => item.title != x.title)
+} 
+
+

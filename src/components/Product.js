@@ -4,15 +4,16 @@ import gallery from '../gallery/index';
 import '../style/Product.css';
 import { Cart } from '../Cart/Cart';
 
-const Product = () => {
+
+const Product = (props) => {
   const [item, setItem] = useState({});
   const [quantity, setQuantity] = useState(0);
   const { id } = useParams();
 
   useEffect(() => {
-    for (let i = 0; i < gallery.length; i++) {
-      if (id === gallery[i].title) {
-        setItem(gallery[i]);
+    for (const element of gallery) {
+      if (id === element.title) {
+        setItem(element);
         return;
       }
     }
@@ -47,9 +48,13 @@ const Product = () => {
       item.quantity = quantity;
       Cart.push(item);
     }
+
+    props.setAddedItem(true)
+    
   };
 
   return (
+    <>
     <div className="item">
       <img className="item-img" src={item.src} alt="item" />
       <div className="item-info">
@@ -65,7 +70,7 @@ const Product = () => {
               className="quantity minus"
               type="button"
               onClick={decrementQuantity}
-            >
+              >
               -
             </button>
 
@@ -73,13 +78,13 @@ const Product = () => {
               className="quantity val"
               value={quantity}
               onChange={inputChangeHandler}
-            />
+              />
 
             <button
               className="quantity pluss"
               type="button"
               onClick={incrementQuantity}
-            >
+              >
               +
             </button>
             <button className="basket-btn" type="button" onClick={addToCart}>
@@ -89,6 +94,7 @@ const Product = () => {
         </div>
       </div>
     </div>
+  </>
   );
 };
 

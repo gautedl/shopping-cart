@@ -5,7 +5,7 @@
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr;
     align-items: center;
     margin: 0px 7rem;
     margin-top: 1rem;
@@ -19,4 +19,18 @@
     border-top: 1px rgba(150, 150, 150, 0.493) solid;
     width: 100%;
     margin: 1rem 0px ;
+}
+
+.delete-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px lightgray solid;
+    background-color: rgba(211, 211, 211, 0.282);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: rgba(211, 211, 211, 0.506);
 }

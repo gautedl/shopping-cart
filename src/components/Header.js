@@ -4,6 +4,7 @@ import logo from '../gallery/icons/logo.png';
 import cart from '../gallery/icons/shopping-cart.svg';
 
 const Header = ({ cartSize }) => {
+  
   return (
     <nav className="header">
       <Link to="/">
@@ -26,7 +27,7 @@ const Header = ({ cartSize }) => {
           {cartSize === 0 ? (
             <div />
           ) : (
-            <div className="cart-quantity">{cartSize}</div>
+            <div className="cart-quantity" >{cartSize}</div>
           )}
         </div>
       </div>
