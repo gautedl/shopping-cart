@@ -12,3 +12,75 @@
     border-bottom: rgba(197, 197, 197, 0.534) 1px solid;
     padding: 0px 7rem;
 }
+
+.btn {
+    display: inline-block;
+    font-family: inherit;
+    background-color: #13aff0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 14px 20px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1291c7;
+}
+
+.checkout-footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.coupon {
+    display: flex;
+    gap: 1rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+.basket {
+    display: flex;
+    justify-content: center;
+}
+
+.basket-container {
+    width: 20rem;
+}
+
+th, td {
+    border-bottom: 1px solid lightgrey;
+    border-collapse: collapse;
+    height: 2rem;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    
+}
+
+.button-row {
+    border: none !important;
+}
+
+.basket-header {
+    font-size: 1.5rem;
+}
+
+td {
+    text-align: end;
+}

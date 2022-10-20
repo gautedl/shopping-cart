@@ -10,6 +10,7 @@ const Product = (props) => {
   const [quantity, setQuantity] = useState(0);
   const { id } = useParams();
 
+
   useEffect(() => {
     for (const element of gallery) {
       if (id === element.title) {

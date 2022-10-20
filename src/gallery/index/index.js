@@ -5,6 +5,10 @@ import munkholmenTemp from '../m-holmen-summer-temp.jpg';
 import hauklandBeach from '../haukland-beach.jpg';
 import hauklandBeachTemp from '../haukland-beach-temp.jpg';
 import nidarosAurora from '../nidaros-aurora.jpg';
+import sunsetTrondheim from '../sunset-trondheim.jpg';
+import stetind from '../stetind.jpg'
+import roomWithAView from '../room-with-a-view.jpg'
+import mardalsfossen from '../mardalsfossen.jpg'
 
 const gallery = [
   {
@@ -34,6 +38,38 @@ const gallery = [
   {
     title: 'Aurora over Nidaros',
     src: nidarosAurora,
+    srcTemp: '',
+    size: '40x60',
+    price: 699,
+    quantity: 0,
+  },
+  {
+    title: 'Sunset Trondheim',
+    src: sunsetTrondheim,
+    srcTemp: '',
+    size: '40x60',
+    price: 699,
+    quantity: 0,
+  },
+  {
+    title: 'Stetind',
+    src: stetind,
+    srcTemp: '',
+    size: '40x60',
+    price: 699,
+    quantity: 0,
+  },
+  {
+    title: 'Room with a view',
+    src: roomWithAView,
+    srcTemp: '',
+    size: '40x60',
+    price: 699,
+    quantity: 0,
+  },
+  {
+    title: 'Mardalsfossen',
+    src: mardalsfossen,
     srcTemp: '',
     size: '40x60',
     price: 699,

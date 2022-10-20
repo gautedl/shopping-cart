@@ -1,9 +1,9 @@
 .products-container {
     height: 100%;
-    max-width: 70%;
+    max-width: 80%;
     display: flex;
     margin: 50px 0px;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
     flex: 4 1
 }

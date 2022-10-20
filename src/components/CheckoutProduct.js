@@ -2,20 +2,27 @@ import '../style/CheckoutProduct.css';
 import { useState } from 'react';
 import { deleteFromCart } from '../Cart/Cart';
 
-const CheckoutProduct = ({ item }) => {
-  const [quantity, setQuantity] = useState(item.quantity);
+const CheckoutProduct = (props) => {
+  const [quantity, setQuantity] = useState(props.item.quantity);
   const [visible, setVisible] = useState(true)
+
 
   const decrementQuantity = () => {
     if (quantity === 0) {
       return;
     } else {
       setQuantity(quantity - 1);
+      props.item.quantity = quantity -1
+
+    
     }
   };
 
   const incrementQuantity = () => {
     setQuantity(quantity + 1);
+    props.item.quantity = quantity + 1
+
+    
   };
 
   const inputChangeHandler = (e) => {
@@ -24,8 +31,9 @@ const CheckoutProduct = ({ item }) => {
 
   
   const deleteProduct = () => {
-    deleteFromCart(item)
+    deleteFromCart(props.item)
     setVisible(false)
+    props.setAddedItem(true)
   }
   
 
@@ -36,11 +44,11 @@ const CheckoutProduct = ({ item }) => {
       <div className="content">
 
         <button className='delete-btn' type='button' onClick={deleteProduct}>X</button>
-        <img className="checkout-img" src={item.src} alt="item" />
+        <img className="checkout-img" src={props.item.src} alt="item" />
         <span className="item-text">
-          {item.title} - {item.size}cm
+          {props.item.title} - {props.item.size}cm
         </span>
-        <span className="price-title">kr{item.price}</span>
+        <span className="price-title">kr{props.item.price}</span>
         <div className="buttons">
           <button
             className="quantity minus"
@@ -64,7 +72,7 @@ const CheckoutProduct = ({ item }) => {
             +
           </button>
         </div>
-        <span className="subtotal">kr{item.price * quantity}</span>
+        <span className="subtotal">kr{props.item.price * quantity}</span>
       </div>
       <div className="horisontal-line-2"></div>
     </div>}

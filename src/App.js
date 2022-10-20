@@ -6,11 +6,11 @@ import Checkout from './components/Checkout';
 import Product from './components/Product';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Cart } from './Cart/Cart';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
+import CheckoutBasket from './components/CheckoutBasket';
 
 function App() {
   const cartSize = Cart.reduce((acc, obj) => {
-    console.log(acc);
     return acc + obj.quantity;
   }, 0);
 
@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     setNumberOfItems(cartSize)
     setAddedItem(false)
-  }, [addedItem])
+  }, [addedItem, cartSize])
 
 
   return (
@@ -32,8 +32,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/cart" element={<Checkout />} />
+          <Route path="/cart" element={<Checkout setAddedItem={setAddedItem}/>} />
           <Route path="/products/:id" element={<Product setAddedItem={setAddedItem}/>} />
+          <Route path='/checkout' element={<CheckoutBasket />} />
         </Routes>
       </div>
     </Router>
