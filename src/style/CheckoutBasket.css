@@ -1,0 +1,6 @@
+.checkout-basket {
+    display: flex;
+    justify-content: center;
+    margin-top: 12rem;
+    font-size: 40px;
+}

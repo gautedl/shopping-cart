@@ -1,4 +1,4 @@
-import { Cart } from '../Cart/Cart';
+import { Cart, emptyCart } from '../Cart/Cart';
 import CheckoutProduct from './CheckoutProduct';
 import { useEffect, useState } from 'react';
 import '../style/Checkout.css';
@@ -30,6 +30,11 @@ const Checkout = (props) => {
     props.setAddedItem(true)
   }
 
+  const handleProceed = () => {
+    emptyCart();
+    props.setAddedItem(true)
+  }
+
   return (
     <div className="checkout">
       <div className="checkout-header">
@@ -54,31 +59,31 @@ const Checkout = (props) => {
       <div className="horisontal-line-2"></div>
       <div className='basket'>
         <table className='basket-container'>
-        <div className='basket-header'>
-          Basket Totals
-        </div>
           <tbody>
-          <tr className='sum table-row'>
-            <th className='table-title'>Sum</th>
-            <td>kr{sum}</td>
-          </tr>
-          <tr className='shipping table-row'>
-            <th className="table-title">Shipping</th>
-            <td>kr{shipping}</td>
-          </tr>
-          <tr className='total'>
-            <th>Total Sum</th>
-            <td>kr{sum + shipping}</td>
-          </tr>
+            <tr className='basket-header'>
+              <th>Basket Totals</th>
+            </tr>
+            <tr className='sum table-row'>
+              <th className='table-title'>Sum</th>
+              <td>kr{sum}</td>
+            </tr>
+            <tr className='shipping table-row'>
+              <th className="table-title">Shipping</th>
+              <td>kr{shipping}</td>
+            </tr>
+            <tr className='total'>
+              <th>Total Sum</th>
+              <td>kr{sum + shipping}</td>
+            </tr>
+            <tr>
+              <th className='button-row'></th>
+              <td className='button-row'>
+                <Link to='/checkout'>
+                  <button className='btn' type='button' onClick={handleProceed}>Proceed</button>
+                </Link>
+                </td>
+            </tr>
           </tbody>
-          <tr>
-            <th className='button-row'></th>
-            <td className='button-row'>
-              <Link to='/checkout'>
-                <button className='btn' type='button'>Proceed</button>
-              </Link>
-              </td>
-          </tr>
         </table>
       </div>
       </> : <></>}

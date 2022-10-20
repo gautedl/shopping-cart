@@ -1,6 +1,8 @@
+import '../style/CheckoutBasket.css'
+
 const CheckoutBasket = () => {
     return (
-        <div>Checkout</div>
+        <div className="checkout-basket">Checkout Logic</div>
     )
 }
 

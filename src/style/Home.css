@@ -1,0 +1,56 @@
+.main-home-img {
+    height: 100vh;
+    left: 0;
+    width: 100%;
+    clip: rect(0, auto, auto, 0);
+    background-image: url('../gallery/pink-sunset.jpg');
+
+
+  overflow: hidden;
+
+  position: absolute;
+  background-size:100vw auto;
+  background-position: center;
+  background-attachment: fixed;
+  top: 0;
+}
+
+.carousel-container {
+    background-color: white;
+    z-index: 1;
+    position: relative;
+    top: 45rem;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.decline-line {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+    clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 100%);
+}
+
+.call-to-action {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    position: relative;
+    top: 0;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+    background-color: rgba(211, 211, 211, 0.292);
+    width: 100%;
+}
+
+.cta-title {
+    text-decoration: none;
+    color: brown;
+}
