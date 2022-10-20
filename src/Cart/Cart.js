@@ -8,3 +8,7 @@ export const deleteFromCart = (item) => {
 export const emptyCart = () => {
   Cart = []
 }
+
+export const deleteEmptyProduct = () => {
+  Cart = Cart.filter((x) => x.quantity > 0)
+}

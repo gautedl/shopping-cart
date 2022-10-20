@@ -80,6 +80,7 @@ table {
 
 .basket-header {
     font-size: 1.5rem;
+    border-bottom: none !important;
 }
 
 td {

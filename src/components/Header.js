@@ -19,17 +19,17 @@ const Header = ({ cartSize }) => {
         <Link to="/products">
           <div className="route">Products</div>
         </Link>
-
+        {cartSize === 0 ? (
+            <div />
+          ) : (
         <div className="cart-div">
           <Link to="/cart">
             <img className="header-icon" src={cart} alt="cart" />
           </Link>
-          {cartSize === 0 ? (
-            <div />
-          ) : (
+          
             <div className="cart-quantity" >{cartSize}</div>
-          )}
         </div>
+        )}
       </div>
     </nav>
   );

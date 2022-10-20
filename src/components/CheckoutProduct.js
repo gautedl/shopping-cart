@@ -1,6 +1,6 @@
 import '../style/CheckoutProduct.css';
 import { useState } from 'react';
-import { deleteFromCart } from '../Cart/Cart';
+import { Cart, deleteFromCart } from '../Cart/Cart';
 
 const CheckoutProduct = (props) => {
   const [quantity, setQuantity] = useState(props.item.quantity);
@@ -34,6 +34,9 @@ const CheckoutProduct = (props) => {
     deleteFromCart(props.item)
     setVisible(false)
     props.setAddedItem(true)
+    if (Cart.length === 0) {
+      props.setItemsInCart(false)
+    }
   }
   
 

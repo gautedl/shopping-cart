@@ -1,4 +1,4 @@
-import { Cart, emptyCart } from '../Cart/Cart';
+import { Cart, deleteEmptyProduct, emptyCart } from '../Cart/Cart';
 import CheckoutProduct from './CheckoutProduct';
 import { useEffect, useState } from 'react';
 import '../style/Checkout.css';
@@ -6,8 +6,10 @@ import { Link } from 'react-router-dom';
 
 const Checkout = (props) => {
   const [item, setItem] = useState();
-  const [sum, setSum] = useState(0)
-  const [shipping, setShipping] = useState(0)
+  const [sum, setSum] = useState(0);
+  const [shipping, setShipping] = useState(0);
+  const [itemsInCart, setItemsInCart] = useState(false);
+
 
   useEffect(() => {
     const value = Cart.reduce((acc, obj) => {
@@ -15,19 +17,22 @@ const Checkout = (props) => {
     }, 0)
     setSum(value)
     setShipping(79)
+    setItemsInCart((Cart.length > 0 && value > 0) ? true : false)
   }, [])
 
 
   useEffect(() => {
-    setItem(Cart.map((x) => <CheckoutProduct key={x.title} item={x} setAddedItem={props.setAddedItem}/>));
+    setItem(Cart.map((x) => <CheckoutProduct key={x.title} item={x} setAddedItem={props.setAddedItem} setItemsInCart={setItemsInCart}/>));
   }, [props.setAddedItem]);
 
   const updateBasket = () => {
     const value = Cart.reduce((acc, obj) => {
       return acc + (obj.quantity * obj.price)
     }, 0)
+    deleteEmptyProduct()
     setSum(value)
     props.setAddedItem(true)
+    setItemsInCart((Cart.length > 0 && value > 0) ? true : false)
   }
 
   const handleProceed = () => {
@@ -45,10 +50,10 @@ const Checkout = (props) => {
         <span>QUANTITY</span>
         <span>SUBTOTAL</span>
       </div>
-      <div>{item}</div>
       
-      { sum > 0 ?
+      { itemsInCart &&
       <>
+      <div>{item}</div>
       <div className='checkout-footer'>
         <div className='coupon'>
           <input className='coupon-input' placeholder='Coupon Code' />
@@ -60,8 +65,8 @@ const Checkout = (props) => {
       <div className='basket'>
         <table className='basket-container'>
           <tbody>
-            <tr className='basket-header'>
-              <th>Basket Totals</th>
+            <tr >
+              <th className='basket-header'>Basket Totals</th>
             </tr>
             <tr className='sum table-row'>
               <th className='table-title'>Sum</th>
@@ -86,8 +91,7 @@ const Checkout = (props) => {
           </tbody>
         </table>
       </div>
-      </> : <></>}
-      
+      </> }  
     </div>
   );
 };
