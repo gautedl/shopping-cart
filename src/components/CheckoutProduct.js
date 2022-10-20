@@ -34,10 +34,6 @@ const CheckoutProduct = (props) => {
     deleteFromCart(props.item)
     setVisible(false)
     props.setAddedItem(true)
-    const value = Cart.reduce((acc, obj) => {
-      return acc + (obj.quantity * obj.price)
-    }, 0)
-    props.setSum(value)
     if (Cart.length === 0) {
       props.setItemsInCart(false)
     }
