@@ -22,7 +22,7 @@ const Checkout = (props) => {
 
 
   useEffect(() => {
-    setItem(Cart.map((x) => <CheckoutProduct key={x.title} item={x} setAddedItem={props.setAddedItem} setItemsInCart={setItemsInCart}/>));
+    setItem(Cart.map((x) => <CheckoutProduct key={x.title} item={x} setAddedItem={props.setAddedItem} setItemsInCart={setItemsInCart} setSum={setSum}/>));
   }, [props.setAddedItem]);
 
   const updateBasket = () => {
