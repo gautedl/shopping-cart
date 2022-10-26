@@ -15,31 +15,33 @@ function App() {
   }, 0);
 
   const [numberOfItems, setNumberOfItems] = useState(cartSize);
-  const [addedItem, setAddedItem] = useState(false)
-
-  
+  const [addedItem, setAddedItem] = useState(false);
 
   useEffect(() => {
-    setNumberOfItems(cartSize)
-    setAddedItem(false)
-  }, [addedItem, cartSize])
-
+    setNumberOfItems(cartSize);
+    setAddedItem(false);
+  }, [addedItem, cartSize]);
 
   return (
     <Router>
       <div className="App">
         <Header cartSize={numberOfItems} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path={['/', '/shopping-cart']} element={<Home />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/cart" element={<Checkout setAddedItem={setAddedItem}/>} />
-          <Route path="/products/:id" element={<Product setAddedItem={setAddedItem}/>} />
-          <Route path='/checkout' element={<CheckoutBasket />} />
+          <Route
+            path="/cart"
+            element={<Checkout setAddedItem={setAddedItem} />}
+          />
+          <Route
+            path="/products/:id"
+            element={<Product setAddedItem={setAddedItem} />}
+          />
+          <Route path="/checkout" element={<CheckoutBasket />} />
         </Routes>
       </div>
     </Router>
   );
 }
-
 
 export default App;
