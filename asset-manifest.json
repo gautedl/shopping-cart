@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.1c212e59.css",
-    "main.js": "/shopping-cart/static/js/main.d9b71c9f.js",
+    "main.js": "/shopping-cart/static/js/main.3d9eef9a.js",
     "static/media/sunset-trondheim.jpg": "/shopping-cart/static/media/sunset-trondheim.3a39fa46ccd406a6273a.jpg",
     "static/media/stetind.jpg": "/shopping-cart/static/media/stetind.80876737f16b39141773.jpg",
     "static/media/nidaros-aurora.jpg": "/shopping-cart/static/media/nidaros-aurora.9feacc23098b00d8f76f.jpg",
@@ -18,10 +18,10 @@
     "index.html": "/shopping-cart/index.html",
     "static/media/shopping-cart.svg": "/shopping-cart/static/media/shopping-cart.8bbd87d59a596b3875d433ccd009250a.svg",
     "main.1c212e59.css.map": "/shopping-cart/static/css/main.1c212e59.css.map",
-    "main.d9b71c9f.js.map": "/shopping-cart/static/js/main.d9b71c9f.js.map"
+    "main.3d9eef9a.js.map": "/shopping-cart/static/js/main.3d9eef9a.js.map"
   },
   "entrypoints": [
     "static/css/main.1c212e59.css",
-    "static/js/main.d9b71c9f.js"
+    "static/js/main.3d9eef9a.js"
   ]
 }
