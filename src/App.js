@@ -27,7 +27,8 @@ function App() {
       <div className="App">
         <Header cartSize={numberOfItems} />
         <Routes>
-          <Route path={['/', '/shopping-cart']} element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/shopping-cart" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route
             path="/cart"
