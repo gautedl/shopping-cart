@@ -1,6 +1,4 @@
-.home-container {
-    width: 100vw;
-}
+
 
 .main-home-img {
     height: 100vh;
@@ -20,14 +18,19 @@
     background-color: white;
     z-index: 1;
     position: relative;
-    top: 45rem;
+    top: 55rem;
     width: 100%;
-
     display: flex;
     justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media (max-width: 550px) {
+    .carousel-container {
+        top: 40rem
+    }
 }
 
 
