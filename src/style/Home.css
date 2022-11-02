@@ -1,18 +1,19 @@
+.home-container {
+    width: 100vw;
+}
+
 .main-home-img {
     height: 100vh;
-    left: 0;
     width: 100%;
+    left: 0;
+    top: 0;
     clip: rect(0, auto, auto, 0);
     background-image: url('../gallery/pink-sunset.jpg');
-
-
-  overflow: hidden;
-
-  position: absolute;
-  background-size:100vw auto;
-  background-position: center;
-  background-attachment: fixed;
-  top: 0;
+    overflow: hidden;
+    position: absolute;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .carousel-container {
@@ -28,6 +29,7 @@
     flex-direction: column;
     align-items: center;
 }
+
 
 .decline-line {
     position: absolute;

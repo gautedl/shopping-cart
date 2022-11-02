@@ -7,6 +7,7 @@
     flex-wrap: wrap;
     flex: 4 1;
     margin-top: 10rem;
+    justify-content: center
 }
 
 .products {
