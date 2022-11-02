@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.9c9cddd4.css",
-    "main.js": "/shopping-cart/static/js/main.8e7e2969.js",
+    "main.css": "/shopping-cart/static/css/main.5432a564.css",
+    "main.js": "/shopping-cart/static/js/main.ce0f8f4e.js",
     "static/media/sunset-trondheim.jpg": "/shopping-cart/static/media/sunset-trondheim.3a39fa46ccd406a6273a.jpg",
     "static/media/stetind.jpg": "/shopping-cart/static/media/stetind.80876737f16b39141773.jpg",
     "static/media/nidaros-aurora.jpg": "/shopping-cart/static/media/nidaros-aurora.9feacc23098b00d8f76f.jpg",
@@ -17,11 +17,11 @@
     "static/media/logo.png": "/shopping-cart/static/media/logo.d6b3654b300c54902030.png",
     "index.html": "/shopping-cart/index.html",
     "static/media/shopping-cart.svg": "/shopping-cart/static/media/shopping-cart.8bbd87d59a596b3875d433ccd009250a.svg",
-    "main.9c9cddd4.css.map": "/shopping-cart/static/css/main.9c9cddd4.css.map",
-    "main.8e7e2969.js.map": "/shopping-cart/static/js/main.8e7e2969.js.map"
+    "main.5432a564.css.map": "/shopping-cart/static/css/main.5432a564.css.map",
+    "main.ce0f8f4e.js.map": "/shopping-cart/static/js/main.ce0f8f4e.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c9cddd4.css",
-    "static/js/main.8e7e2969.js"
+    "static/css/main.5432a564.css",
+    "static/js/main.ce0f8f4e.js"
   ]
 }
